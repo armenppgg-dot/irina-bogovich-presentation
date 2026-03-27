@@ -164,15 +164,16 @@ p {
 
 .cover-gallery {
   position: relative;
-  width: min(100%, 412px);
-  height: min(74vw, 470px);
-  min-height: 338px;
+  width: min(100%, 448px);
+  height: min(82vw, 520px);
+  min-height: 382px;
+  margin-top: 10px;
   justify-self: center;
 }
 
 .cover-bottle {
   position: absolute;
-  width: 38%;
+  width: 43%;
   padding: 12px;
   border: 1px solid var(--line);
   border-radius: 26px;
@@ -187,27 +188,29 @@ p {
 }
 
 .cover-bottle-left {
-  top: 5%;
-  left: 4%;
+  top: 6%;
+  left: 6%;
   transform: rotate(-6deg);
+  z-index: 1;
 }
 
 .cover-bottle-right {
   top: 2%;
-  right: 4%;
+  right: 7%;
   transform: rotate(5deg);
+  z-index: 1;
 }
 
 .cover-bottle-bottom-left {
-  bottom: 0;
-  left: 15%;
+  bottom: 2%;
+  left: 18%;
   transform: rotate(2deg);
-  z-index: 2;
+  z-index: 3;
 }
 
 .cover-bottle-bottom-right {
-  right: 13%;
-  bottom: 3%;
+  right: 17%;
+  bottom: 6%;
   transform: rotate(-3deg);
   z-index: 2;
 }
@@ -400,29 +403,34 @@ p {
   }
 
   .cover-gallery {
-    width: min(100%, 500px);
-    height: 500px;
+    width: min(100%, 540px);
+    height: 560px;
+    margin-top: 18px;
   }
 
   .cover-bottle {
-    width: 27%;
+    width: 31%;
     padding: 13px;
   }
 
   .cover-bottle-left {
-    left: 8%;
+    top: 7%;
+    left: 11%;
   }
 
   .cover-bottle-right {
-    right: 8%;
+    top: 2%;
+    right: 12%;
   }
 
   .cover-bottle-bottom-left {
-    left: 27%;
+    left: 30%;
+    bottom: 2%;
   }
 
   .cover-bottle-bottom-right {
-    right: 27%;
+    right: 29%;
+    bottom: 8%;
   }
 
   .section-closing {
@@ -444,7 +452,8 @@ p {
   }
 
   .section-cover .cover-gallery {
-    justify-self: end;
+    justify-self: center;
+    transform: translateY(22px);
   }
 }
 
