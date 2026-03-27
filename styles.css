@@ -165,10 +165,14 @@ p {
 .cover-gallery {
   position: relative;
   width: min(100%, 470px);
-  height: min(86vw, 548px);
-  min-height: 404px;
   margin-top: 16px;
   justify-self: center;
+}
+
+.cover-hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .cover-bottle {
@@ -410,7 +414,6 @@ p {
 
   .cover-gallery {
     width: min(100%, 560px);
-    height: 600px;
     margin-top: 22px;
   }
 
