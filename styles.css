@@ -376,6 +376,19 @@ p {
   transform: translateY(0);
 }
 
+@media (max-width: 739px) {
+  .section-cover .cover-gallery {
+    width: min(calc(100% - 10px), 440px);
+    aspect-ratio: 448 / 620;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-cover .cover-hero-image {
+    object-position: 56% 50%;
+  }
+}
+
 @media (min-width: 740px) {
   .page-shell {
     padding-left: 24px;
