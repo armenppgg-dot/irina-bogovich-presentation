@@ -27,16 +27,25 @@
           </p>
         </div>
         <div class="cover-gallery" aria-label="Этикетки вин">
-          <img
-            class="cover-hero-image"
-            src="assets/labels/web/cover-hero.svg"
-            alt=""
-            width="560"
-            height="620"
-            loading="eager"
-            decoding="async"
-            fetchpriority="high"
-          />
+          <picture class="cover-hero-picture">
+            <source
+              media="(max-width: 740px)"
+              srcset="
+                assets/labels/web/cover-hero.svg 1x,
+                assets/labels/web/cover-hero@2x.svg 2x
+              "
+            />
+            <img
+              class="cover-hero-image"
+              src="assets/labels/web/cover-hero.svg"
+              alt=""
+              width="560"
+              height="620"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
+            />
+          </picture>
         </div>
       </section>
 

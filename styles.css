@@ -175,6 +175,10 @@ p {
   height: auto;
 }
 
+.cover-hero-picture {
+  display: block;
+}
+
 .cover-bottle {
   position: absolute;
   width: 38%;
