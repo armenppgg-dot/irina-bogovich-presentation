@@ -164,16 +164,16 @@ p {
 
 .cover-gallery {
   position: relative;
-  width: min(100%, 448px);
-  height: min(82vw, 520px);
-  min-height: 382px;
-  margin-top: 10px;
+  width: min(100%, 470px);
+  height: min(86vw, 548px);
+  min-height: 404px;
+  margin-top: 16px;
   justify-self: center;
 }
 
 .cover-bottle {
   position: absolute;
-  width: 43%;
+  width: 38%;
   padding: 12px;
   border: 1px solid var(--line);
   border-radius: 26px;
@@ -188,31 +188,37 @@ p {
 }
 
 .cover-bottle-left {
-  top: 6%;
-  left: 6%;
-  transform: rotate(-6deg);
+  top: 11%;
+  left: 9%;
+  transform: rotate(-5deg);
   z-index: 1;
 }
 
 .cover-bottle-right {
-  top: 2%;
-  right: 7%;
-  transform: rotate(5deg);
+  top: 5%;
+  right: 10%;
+  transform: rotate(4deg);
   z-index: 1;
 }
 
 .cover-bottle-bottom-left {
-  bottom: 2%;
-  left: 18%;
-  transform: rotate(2deg);
+  width: 52%;
+  bottom: 14%;
+  left: 24%;
+  transform: rotate(-1deg);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 22px 48px rgba(76, 55, 31, 0.1);
   z-index: 3;
 }
 
 .cover-bottle-bottom-right {
-  right: 17%;
-  bottom: 6%;
-  transform: rotate(-3deg);
-  z-index: 2;
+  display: none;
+}
+
+.cover-bottle-left,
+.cover-bottle-right {
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 10px 24px rgba(76, 55, 31, 0.06);
 }
 
 .point-list,
@@ -403,34 +409,30 @@ p {
   }
 
   .cover-gallery {
-    width: min(100%, 540px);
-    height: 560px;
-    margin-top: 18px;
+    width: min(100%, 560px);
+    height: 600px;
+    margin-top: 22px;
   }
 
   .cover-bottle {
-    width: 31%;
+    width: 29%;
     padding: 13px;
   }
 
   .cover-bottle-left {
-    top: 7%;
-    left: 11%;
+    top: 12%;
+    left: 14%;
   }
 
   .cover-bottle-right {
-    top: 2%;
-    right: 12%;
+    top: 5%;
+    right: 15%;
   }
 
   .cover-bottle-bottom-left {
-    left: 30%;
-    bottom: 2%;
-  }
-
-  .cover-bottle-bottom-right {
-    right: 29%;
-    bottom: 8%;
+    width: 40%;
+    left: 31%;
+    bottom: 14%;
   }
 
   .section-closing {
@@ -453,7 +455,7 @@ p {
 
   .section-cover .cover-gallery {
     justify-self: center;
-    transform: translateY(22px);
+    transform: translateY(30px);
   }
 }
 
