@@ -76,9 +76,17 @@ img {
   min-height: calc(100svh - 40px);
   display: grid;
   align-content: space-between;
-  gap: 36px;
-  padding-top: 44px;
-  padding-bottom: 28px;
+  gap: 44px;
+  padding-top: clamp(54px, 10svh, 88px);
+  padding-bottom: 34px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 240, 231, 0.86)),
+    var(--bg-soft);
+}
+
+.section-cover .cover-copy {
+  display: grid;
+  gap: 24px;
 }
 
 .cover-copy,
@@ -104,9 +112,10 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(2.3rem, 9vw, 5.6rem);
-  line-height: 0.95;
-  max-width: 12ch;
+  font-size: clamp(2.65rem, 9.8vw, 5.55rem);
+  line-height: 0.92;
+  max-width: 10.8ch;
+  letter-spacing: -0.045em;
 }
 
 h2 {
@@ -133,24 +142,42 @@ p {
   max-width: 32rem;
 }
 
+.section-cover .cover-copy p:not(.section-kicker) {
+  margin-top: 0;
+}
+
+.cover-intro {
+  max-width: 27rem;
+  font-size: 0.97rem;
+  line-height: 1.86;
+  color: #5e5245;
+}
+
 .cover-wines {
   color: var(--muted);
+  max-width: 27rem;
+  font-size: 0.82rem;
+  line-height: 1.9;
+  letter-spacing: 0.02em;
+  opacity: 0.82;
 }
 
 .cover-gallery {
   position: relative;
-  height: min(68vw, 470px);
-  min-height: 320px;
+  width: min(100%, 412px);
+  height: min(74vw, 470px);
+  min-height: 338px;
+  justify-self: center;
 }
 
 .cover-bottle {
   position: absolute;
-  width: 42%;
+  width: 38%;
   padding: 12px;
   border: 1px solid var(--line);
   border-radius: 26px;
-  background: var(--surface-strong);
-  box-shadow: var(--shadow-soft);
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 14px 34px rgba(76, 55, 31, 0.08);
   backdrop-filter: blur(14px);
 }
 
@@ -160,27 +187,29 @@ p {
 }
 
 .cover-bottle-left {
-  top: 0;
-  left: 0;
+  top: 5%;
+  left: 4%;
   transform: rotate(-6deg);
 }
 
 .cover-bottle-right {
   top: 2%;
-  right: 0;
-  transform: rotate(6deg);
+  right: 4%;
+  transform: rotate(5deg);
 }
 
 .cover-bottle-bottom-left {
   bottom: 0;
-  left: 9%;
-  transform: rotate(3deg);
+  left: 15%;
+  transform: rotate(2deg);
+  z-index: 2;
 }
 
 .cover-bottle-bottom-right {
-  right: 9%;
-  bottom: 0;
-  transform: rotate(-4deg);
+  right: 13%;
+  bottom: 3%;
+  transform: rotate(-3deg);
+  z-index: 2;
 }
 
 .point-list,
@@ -199,6 +228,22 @@ p {
   backdrop-filter: blur(12px);
 }
 
+.wine-card {
+  background: rgba(255, 255, 255, 0.66);
+  box-shadow: 0 8px 24px rgba(76, 55, 31, 0.05);
+}
+
+.wine-card:not(.wine-card-main) {
+  border-color: rgba(107, 89, 69, 0.1);
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.wine-card-main {
+  border-color: var(--line-strong);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(250, 244, 236, 0.92));
+  box-shadow: 0 16px 42px rgba(76, 55, 31, 0.08);
+}
+
 .point-card {
   padding: 18px 18px 20px;
 }
@@ -212,6 +257,62 @@ p {
   background: linear-gradient(180deg, #fffefb, #f9f1e7);
 }
 
+.section-closing {
+  padding-top: 40px;
+  padding-bottom: 36px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 240, 231, 0.92)),
+    var(--bg-soft);
+}
+
+.section-closing .section-copy {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-closing h2 {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 10ch;
+}
+
+.section-closing .section-copy p:not(.section-kicker) {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 31rem;
+  color: #5e5245;
+}
+
+.section-closing .point-list {
+  margin-top: 34px;
+  gap: 14px;
+}
+
+.section-closing .point-card {
+  padding: 21px 18px 23px;
+  border-color: rgba(107, 89, 69, 0.13);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(250, 245, 238, 0.82));
+  box-shadow: 0 12px 30px rgba(76, 55, 31, 0.06);
+}
+
+.section-closing .point-card-strong {
+  border-color: var(--line-strong);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(248, 237, 223, 0.98));
+  box-shadow: 0 22px 54px rgba(76, 55, 31, 0.1);
+}
+
+.section-closing .point-card-strong h3 {
+  margin-bottom: 14px;
+}
+
+.section-closing .point-card-strong p {
+  max-width: 10ch;
+  font-family: "Iowan Old Style", "Baskerville", "Times New Roman", serif;
+  font-size: clamp(1.8rem, 7vw, 2.9rem);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+}
+
 .wine-image-frame {
   padding: 14px 14px 0;
 }
@@ -220,8 +321,24 @@ p {
   padding: 20px 18px 22px;
 }
 
+.wine-card:not(.wine-card-main) .wine-image-frame {
+  padding: 13px 13px 0;
+}
+
+.wine-card:not(.wine-card-main) .wine-card-copy {
+  padding-top: 18px;
+}
+
 .wine-card-main .wine-card-copy {
-  padding-top: 22px;
+  padding-top: 24px;
+}
+
+.wine-card-main .wine-card-copy h3 {
+  font-size: 1.62rem;
+}
+
+.wine-card:not(.wine-card-main) .wine-card-copy h3 {
+  font-size: 1.34rem;
 }
 
 .reveal {
@@ -249,6 +366,15 @@ p {
     padding: 42px 34px;
   }
 
+  .section-cover {
+    padding-top: 64px;
+    padding-bottom: 42px;
+  }
+
+  .section-cover .cover-copy {
+    gap: 28px;
+  }
+
   .point-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -274,28 +400,51 @@ p {
   }
 
   .cover-gallery {
-    height: 480px;
+    width: min(100%, 500px);
+    height: 500px;
   }
 
   .cover-bottle {
-    width: 28%;
-    padding: 14px;
+    width: 27%;
+    padding: 13px;
   }
 
   .cover-bottle-left {
-    left: 9%;
+    left: 8%;
   }
 
   .cover-bottle-right {
-    right: 9%;
+    right: 8%;
   }
 
   .cover-bottle-bottom-left {
-    left: 28%;
+    left: 27%;
   }
 
   .cover-bottle-bottom-right {
-    right: 28%;
+    right: 27%;
+  }
+
+  .section-closing {
+    padding-top: 48px;
+    padding-bottom: 44px;
+  }
+
+  .section-closing .point-card-strong {
+    grid-column: 1 / -1;
+    padding: 26px 24px 28px;
+  }
+}
+
+@media (min-width: 900px) {
+  .section-cover {
+    grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+    align-items: end;
+    gap: clamp(42px, 7vw, 92px);
+  }
+
+  .section-cover .cover-gallery {
+    justify-self: end;
   }
 }
 
