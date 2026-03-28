@@ -396,12 +396,15 @@ p {
   h2,
   .section-closing h2 {
     max-width: none;
-    text-wrap: balance;
+    text-wrap: wrap;
   }
 
   h3,
   p {
-    text-wrap: pretty;
+    text-wrap: wrap;
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: normal;
   }
 
   .cover-copy p:not(.section-kicker),
@@ -413,7 +416,14 @@ p {
     max-width: none;
   }
 
-  p br {
+  .cover-intro {
+    line-height: 1.72;
+  }
+
+  .cover-intro br,
+  .section-copy p br,
+  .wine-card-copy p br,
+  .section-closing p br {
     display: none;
   }
 
