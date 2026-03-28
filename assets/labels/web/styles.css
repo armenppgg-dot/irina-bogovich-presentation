@@ -94,6 +94,10 @@ img {
   max-width: 42rem;
 }
 
+.section-copy h2 {
+  max-width: none;
+}
+
 .section-kicker {
   margin: 0 0 14px;
   font-size: 0.72rem;
