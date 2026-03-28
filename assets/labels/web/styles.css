@@ -392,7 +392,7 @@ p {
   .point-card,
   .wine-card-copy {
     width: 100%;
-    max-width: none;
+    max-width: 100%;
     min-width: 0;
   }
 
@@ -411,21 +411,22 @@ p {
     overflow-wrap: normal;
   }
 
-  .cover-copy p:not(.section-kicker),
-  .section-copy p:not(.section-kicker),
+  .section-copy,
+  .section-copy h2,
+  .section-copy p,
+  .point-card,
+  .point-card p,
   .cover-intro,
-  .cover-wines,
-  .section-closing .section-copy p:not(.section-kicker),
-  .section-closing .point-card-strong p {
-    max-width: none;
-  }
-
+  .wine-card-copy,
+  .wine-card-copy p,
   .section-copy > *:not(.section-kicker),
   .point-card > *,
   .wine-card-copy > *,
-  .cover-intro {
+  .section-closing .section-copy,
+  .section-closing .section-copy p:not(.section-kicker),
+  .section-closing .point-card-strong p {
     width: 100%;
-    max-width: none;
+    max-width: 100%;
   }
 
   .cover-intro {
