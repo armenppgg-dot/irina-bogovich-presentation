@@ -420,6 +420,14 @@ p {
     max-width: none;
   }
 
+  .section-copy > *:not(.section-kicker),
+  .point-card > *,
+  .wine-card-copy > *,
+  .cover-intro {
+    width: 100%;
+    max-width: none;
+  }
+
   .cover-intro {
     line-height: 1.72;
   }
