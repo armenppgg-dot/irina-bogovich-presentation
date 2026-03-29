@@ -381,6 +381,14 @@ p {
 }
 
 @media (max-width: 739px) {
+  .reveal {
+    transform: translateY(18px);
+    transition:
+      opacity 0.42s ease,
+      transform 0.42s ease;
+    transition-delay: 0s;
+  }
+
   .section-cover,
   .point-list,
   .wine-gallery {
