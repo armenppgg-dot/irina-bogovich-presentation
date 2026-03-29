@@ -6,7 +6,7 @@ const initReveals = () => {
     return;
   }
 
-  if (!("IntersectionObserver" in window)) {
+  if (isPhone || !("IntersectionObserver" in window)) {
     reveals.forEach((element) => element.classList.add("is-visible"));
     return;
   }

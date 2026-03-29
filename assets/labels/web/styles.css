@@ -382,11 +382,9 @@ p {
 
 @media (max-width: 739px) {
   .reveal {
-    transform: translateY(18px);
-    transition:
-      opacity 0.42s ease,
-      transform 0.42s ease;
-    transition-delay: 0s;
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 
   .section-cover,
@@ -423,9 +421,12 @@ p {
   .section-copy h2,
   .section-copy p,
   .point-card,
+  .point-card h3,
   .point-card p,
   .cover-intro,
+  .cover-wines,
   .wine-card-copy,
+  .wine-card-copy h3,
   .wine-card-copy p,
   .section-copy > *:not(.section-kicker),
   .point-card > *,
@@ -433,8 +434,9 @@ p {
   .section-closing .section-copy,
   .section-closing .section-copy p:not(.section-kicker),
   .section-closing .point-card-strong p {
-    width: 100%;
-    max-width: 100%;
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
   .cover-intro {
