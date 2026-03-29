@@ -94,6 +94,10 @@ img {
   max-width: 42rem;
 }
 
+.section-copy h2 {
+  max-width: none;
+}
+
 .section-kicker {
   margin: 0 0 14px;
   font-size: 0.72rem;
@@ -377,6 +381,75 @@ p {
 }
 
 @media (max-width: 739px) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .section-cover,
+  .point-list,
+  .wine-gallery {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .cover-copy,
+  .section-copy,
+  .point-card,
+  .wine-card-copy {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  h1,
+  h2,
+  .section-closing h2 {
+    max-width: none;
+    text-wrap: wrap;
+  }
+
+  h3,
+  p {
+    text-wrap: wrap;
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: normal;
+  }
+
+  .section-copy,
+  .section-copy h2,
+  .section-copy p,
+  .point-card,
+  .point-card h3,
+  .point-card p,
+  .cover-intro,
+  .cover-wines,
+  .wine-card-copy,
+  .wine-card-copy h3,
+  .wine-card-copy p,
+  .section-copy > *:not(.section-kicker),
+  .point-card > *,
+  .wine-card-copy > *,
+  .section-closing .section-copy,
+  .section-closing .section-copy p:not(.section-kicker),
+  .section-closing .point-card-strong p {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .cover-intro {
+    line-height: 1.72;
+  }
+
+  .cover-intro br,
+  .section-copy p br,
+  .wine-card-copy p br,
+  .section-closing p br {
+    display: none;
+  }
+
   .section-cover .cover-gallery {
     width: min(100%, 410px);
     aspect-ratio: 990 / 1260;

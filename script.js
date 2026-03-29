@@ -1,6 +1,16 @@
-const reveals = document.querySelectorAll(".reveal");
+const initReveals = () => {
+  const reveals = document.querySelectorAll(".reveal:not(.is-visible)");
+  const isPhone = window.matchMedia("(max-width: 739px)").matches;
 
-if ("IntersectionObserver" in window) {
+  if (!reveals.length) {
+    return;
+  }
+
+  if (isPhone || !("IntersectionObserver" in window)) {
+    reveals.forEach((element) => element.classList.add("is-visible"));
+    return;
+  }
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -13,12 +23,16 @@ if ("IntersectionObserver" in window) {
       });
     },
     {
-      threshold: 0.18,
-      rootMargin: "0px 0px -8% 0px",
+      threshold: isPhone ? 0.01 : 0.12,
+      rootMargin: isPhone ? "240px 0px -4% 0px" : "120px 0px -8% 0px",
     },
   );
 
   reveals.forEach((element) => observer.observe(element));
+};
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initReveals, { once: true });
 } else {
-  reveals.forEach((element) => element.classList.add("is-visible"));
+  initReveals();
 }
