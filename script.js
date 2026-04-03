@@ -23,7 +23,7 @@ const slides = slideFiles.map((fileName, index) => ({
   alt: `Слайд ${index + 1}`,
 }));
 
-const audioTrack = "assets/audio/music.mp3";
+const audioTrack = "assets/assets/audio/music.mp3";
 
 const prefersReducedMotion = window.matchMedia(
   "(prefers-reduced-motion: reduce)",
